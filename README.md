@@ -56,3 +56,7 @@ php artisan sail:install
 ```bash
 http://127.0.0.1/docs
 ```
+### 9. Run tests
+```bash
+./vendor/bin/sail artisan test
+```
