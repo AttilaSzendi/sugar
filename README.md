@@ -16,8 +16,8 @@ Follow the steps below to get a local copy up and running.
 Clone the repository to your local machine using Git:
 
 ```bash
-git clone https://github.com/your-username/movie-screening-api.git
-cd movie-screening-api
+git clone git@github.com:AttilaSzendi/sugar.git
+cd sugar
 ```
 
 ### 2. Install composer packages
