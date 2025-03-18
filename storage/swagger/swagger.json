@@ -1,0 +1,664 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Laravel",
+        "description": "Documentation for the Application API",
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost/api",
+            "description": "Laravel Server #1"
+        }
+    ],
+    "paths": {
+        "/movies": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "(Unauthorized) Invalid or missing Access Token"
+                    }
+                },
+                "tags": [
+                    "movies"
+                ]
+            },
+            "post": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "(Unauthorized) Invalid or missing Access Token"
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "title",
+                                    "description",
+                                    "age_limit",
+                                    "language"
+                                ],
+                                "properties": {
+                                    "title": {
+                                        "type": "string",
+                                        "maxLength": 255
+                                    },
+                                    "description": {
+                                        "type": "string"
+                                    },
+                                    "age_limit": {
+                                        "type": "integer",
+                                        "enum": [
+                                            "0",
+                                            "6",
+                                            "12",
+                                            "16",
+                                            "18"
+                                        ]
+                                    },
+                                    "language": {
+                                        "type": "string",
+                                        "enum": [
+                                            "English",
+                                            "Spanish",
+                                            "French",
+                                            "German"
+                                        ]
+                                    },
+                                    "cover_image": {
+                                        "type": "string",
+                                        "nullable": true,
+                                        "format": "uri"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "movies"
+                ]
+            }
+        },
+        "/movies/{movie}": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "(Unauthorized) Invalid or missing Access Token"
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "movie",
+                        "in": "path",
+                        "required": true,
+                        "description": "",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "tags": [
+                    "movies"
+                ]
+            },
+            "put": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "(Unauthorized) Invalid or missing Access Token"
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "movie",
+                        "in": "path",
+                        "required": true,
+                        "description": "",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "title",
+                                    "description",
+                                    "age_limit",
+                                    "language"
+                                ],
+                                "properties": {
+                                    "title": {
+                                        "type": "string",
+                                        "maxLength": 255
+                                    },
+                                    "description": {
+                                        "type": "string"
+                                    },
+                                    "age_limit": {
+                                        "type": "integer",
+                                        "enum": [
+                                            "0",
+                                            "6",
+                                            "12",
+                                            "16",
+                                            "18"
+                                        ]
+                                    },
+                                    "language": {
+                                        "type": "string",
+                                        "enum": [
+                                            "English",
+                                            "Spanish",
+                                            "French",
+                                            "German"
+                                        ]
+                                    },
+                                    "cover_image": {
+                                        "type": "string",
+                                        "nullable": true,
+                                        "format": "uri"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "movies"
+                ]
+            },
+            "patch": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "(Unauthorized) Invalid or missing Access Token"
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "movie",
+                        "in": "path",
+                        "required": true,
+                        "description": "",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "title",
+                                    "description",
+                                    "age_limit",
+                                    "language"
+                                ],
+                                "properties": {
+                                    "title": {
+                                        "type": "string",
+                                        "maxLength": 255
+                                    },
+                                    "description": {
+                                        "type": "string"
+                                    },
+                                    "age_limit": {
+                                        "type": "integer",
+                                        "enum": [
+                                            "0",
+                                            "6",
+                                            "12",
+                                            "16",
+                                            "18"
+                                        ]
+                                    },
+                                    "language": {
+                                        "type": "string",
+                                        "enum": [
+                                            "English",
+                                            "Spanish",
+                                            "French",
+                                            "German"
+                                        ]
+                                    },
+                                    "cover_image": {
+                                        "type": "string",
+                                        "nullable": true,
+                                        "format": "uri"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "movies"
+                ]
+            },
+            "delete": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "(Unauthorized) Invalid or missing Access Token"
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "movie",
+                        "in": "path",
+                        "required": true,
+                        "description": "",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "tags": [
+                    "movies"
+                ]
+            }
+        },
+        "/screenings": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "(Unauthorized) Invalid or missing Access Token"
+                    }
+                },
+                "tags": [
+                    "screenings"
+                ]
+            },
+            "post": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "(Unauthorized) Invalid or missing Access Token"
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "movie_id",
+                                    "time",
+                                    "available_seats"
+                                ],
+                                "properties": {
+                                    "movie_id": {
+                                        "type": "string"
+                                    },
+                                    "time": {
+                                        "type": "string",
+                                        "format": "date"
+                                    },
+                                    "available_seats": {
+                                        "type": "integer",
+                                        "minimum": 1
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "screenings"
+                ]
+            }
+        },
+        "/screenings/{screening}": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "(Unauthorized) Invalid or missing Access Token"
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "screening",
+                        "in": "path",
+                        "required": true,
+                        "description": "",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "tags": [
+                    "screenings"
+                ]
+            },
+            "put": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "(Unauthorized) Invalid or missing Access Token"
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "screening",
+                        "in": "path",
+                        "required": true,
+                        "description": "",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "movie_id",
+                                    "time",
+                                    "available_seats"
+                                ],
+                                "properties": {
+                                    "movie_id": {
+                                        "type": "string"
+                                    },
+                                    "time": {
+                                        "type": "string",
+                                        "format": "date"
+                                    },
+                                    "available_seats": {
+                                        "type": "integer",
+                                        "minimum": 1
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "screenings"
+                ]
+            },
+            "patch": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "(Unauthorized) Invalid or missing Access Token"
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "screening",
+                        "in": "path",
+                        "required": true,
+                        "description": "",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "movie_id",
+                                    "time",
+                                    "available_seats"
+                                ],
+                                "properties": {
+                                    "movie_id": {
+                                        "type": "string"
+                                    },
+                                    "time": {
+                                        "type": "string",
+                                        "format": "date"
+                                    },
+                                    "available_seats": {
+                                        "type": "integer",
+                                        "minimum": 1
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "screenings"
+                ]
+            },
+            "delete": {
+                "summary": "",
+                "description": "",
+                "deprecated": false,
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "(Unauthorized) Invalid or missing Access Token"
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "screening",
+                        "in": "path",
+                        "required": true,
+                        "description": "",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "tags": [
+                    "screenings"
+                ]
+            }
+        }
+    },
+    "tags": [],
+    "components": {
+        "schemas": {
+            "Movie": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "title": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string"
+                    },
+                    "age_limit": {
+                        "type": "object",
+                        "nullable": true,
+                        "additionalProperties": true,
+                        "description": "int"
+                    },
+                    "language": {
+                        "type": "string"
+                    },
+                    "cover_image": {
+                        "type": "string"
+                    },
+                    "created_at": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "updated_at": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "screenings": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "$ref": "#/components/schemas/Screening"
+                        }
+                    }
+                },
+                "required": [
+                    "id",
+                    "title",
+                    "description",
+                    "age_limit",
+                    "language"
+                ]
+            },
+            "Screening": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "time": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "available_seats": {
+                        "type": "object",
+                        "nullable": true,
+                        "additionalProperties": true,
+                        "description": "int"
+                    },
+                    "movie_id": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "created_at": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "updated_at": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "movie": {
+                        "type": "object",
+                        "$ref": "#/components/schemas/Movie"
+                    }
+                },
+                "required": [
+                    "id",
+                    "time",
+                    "available_seats",
+                    "movie_id"
+                ]
+            },
+            "User": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "email": {
+                        "type": "string"
+                    },
+                    "email_verified_at": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "password": {
+                        "type": "string"
+                    },
+                    "remember_token": {
+                        "type": "string"
+                    },
+                    "created_at": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "updated_at": {
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                },
+                "required": [
+                    "id",
+                    "name",
+                    "email",
+                    "password"
+                ]
+            }
+        },
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "http",
+                "scheme": "bearer",
+                "bearerFormat": "JWT"
+            }
+        }
+    }
+}
